@@ -50,7 +50,6 @@ data = data.merge(feat, on='Molecule_ID', how='left')
 feat = df_molecule.drop('Fingerprint',axis=1)
 data = data.merge(feat, on='Molecule_ID', how='left')
 
-#3、protein 蛋白质 词向量训练 看不懂的加公众号：Python_R_wu，稍后会讲解下，来不及写
 n = 128
 texts = [[word for word in re.findall(r'.{3}',document)] 
                for document in list(protein_concat['Sequence'])]
